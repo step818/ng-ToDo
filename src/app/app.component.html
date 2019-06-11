@@ -28,3 +28,7 @@
   <input type="radio" [(ngModel)]="selectedTask.priority" [value]="3">3 (High Priority)
   <button (click)="finishedEditing()">Done</button>
 </div>
+
+//Add form and button. Fix it!
+<input type="text" #task>
+<button (click)="addTask(task)">Add Task</button>

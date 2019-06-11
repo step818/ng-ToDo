@@ -15,7 +15,7 @@ export class AppComponent {
   tasks: Task[] = [
     new Task('Finish weekend Angular homework for Epicodus course', 3),
     new Task('Begin brainstorming possible JavaScript group projects', 2),
-    new Task('Add README file to last few Angular repos on GitHub', 1)
+    new Task('Add README file to last few Angular repos on Git Hub', 1)
   ];
   // selectedTask: Task = this.tasks[0];
   selectedTask = null;
@@ -34,6 +34,15 @@ export class AppComponent {
   }
   finishedEditing() {
     this.selectedTask = null;
+  }
+
+  //This is basics but still buggy. Make Add and Delete work
+  addTask(task) {
+    this.tasks.push({description.value});
+  }
+
+  deleteTask(task) {
+    this.tasks.splice(this.tasks.indexOf(this.selectedTask), 1);
   }
 }
 
