@@ -35,13 +35,14 @@ export class AppComponent {
   finishedEditing() {
     this.selectedTask = null;
   }
-
-  //This is basics but still buggy. Make Add and Delete work
-  addTask(task) {
-    this.tasks.push({description.value});
+//Add works but priority color method defaults to bg-info
+  addTask(description: string, priority: number) {
+   
+    this.tasks.push(new Task(description, priority));
+    this.priorityColor(this.tasks);
   }
 
-  deleteTask(task) {
+  deleteTask() {
     this.tasks.splice(this.tasks.indexOf(this.selectedTask), 1);
   }
 }
